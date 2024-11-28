@@ -16,7 +16,8 @@
     margin: auto;
     /* border: 2px red solid; */
     padding: 5rem 0;
-    margin: 10rem auto;
+    /* margin: 10rem auto; */
+    /* margin-bottom: 0; */
     position: relative;
     isolation: isolate;
     display: grid;
