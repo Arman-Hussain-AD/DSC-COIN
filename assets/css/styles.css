@@ -79,6 +79,7 @@ html {
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
   transition: color .4s;
+  font-size: 2rem;
 }
 
 .nav__logo:hover {
