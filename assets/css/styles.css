@@ -76,7 +76,7 @@ html {
   color: var(--white-color);
 }
 .nav__logo {
-  color: var(--white-color);
+  color: yellow;
   font-weight: var(--font-semi-bold);
   transition: color .4s;
   font-size: 2rem;
@@ -116,13 +116,13 @@ html {
 }
 
 .nav__link {
-  color: var(--white-color);
+  color: yellow;
   font-weight: var(--font-semi-bold);
   transition: color .4s;
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color: whitesmoke;
 }
 
 .nav__close {
