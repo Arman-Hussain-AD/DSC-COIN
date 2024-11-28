@@ -204,6 +204,9 @@ body {
     flex-direction: column;
   }
 
+  /* .steps{
+    width: 100%;
+  } */
   /* .portfolio-image {
     margin-bottom: 2rem;
   } */
@@ -218,7 +221,8 @@ body {
   }
 
   .step {
-    flex-direction: column;
+    /* flex-direction: column; */
+    text-align: left;
     align-items: flex-start;
   }
 
@@ -322,6 +326,10 @@ body {
   .container-about {
       flex-direction: column;
       align-items: center;
+  }
+
+  .about{
+    width: 100%;
   }
 
   .token-image {
@@ -443,6 +451,9 @@ h2::after {
 
   .feature2 {
     width: 250px; /* Smaller box width on smaller screens */
+  }
+  .why-choose-us{
+    width: 100%;
   }
   
 }
@@ -767,6 +778,9 @@ table td {
     flex-direction: column;
     gap: 1.5rem;
   }
+  .tokenomics{
+    width: 100%;
+  }
 
   table th, table td {
     font-size: 0.8rem;
@@ -779,7 +793,7 @@ table td {
 
 
 .help-section {
-  text-align: center;
+  text-align: left;
   padding: 20px;
   margin: auto;
   max-width: 1200px;
@@ -832,6 +846,10 @@ table td {
 @media (max-width: 768px) {
   .help-box h2 {
     font-size: 1.25rem;
+  }
+
+  .help-section{
+    width: 100%;
   }
   .help-box p {
     font-size: 0.9rem;
@@ -915,6 +933,7 @@ table td {
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
+    width: 100%;
     text-align: center;
   }
 
