@@ -497,6 +497,17 @@ h2::after {
   text-transform: capitalize;
 }
 
+#newsPara{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  margin-top: 5px;
+  color: rgb(255, 0, 0);
+  letter-spacing: 2px;
+  font-weight: bolder;
+}
+
 .btn2 {
     background: #e6bb42;
     border: none;
