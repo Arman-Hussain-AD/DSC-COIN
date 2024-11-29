@@ -1,55 +1,42 @@
+"use strict";
 
+let words = document.querySelectorAll(".word");
+words.forEach((word) => {
+  let letters = word.textContent.split("");
+  word.textContent = "";
+  letters.forEach((letter) => {
+    let span = document.createElement("span");
+    span.textContent = letter;
+    span.className = "letter";
+    word.append(span);
+  });
+});
 
-const scrollRevealOption = {
-    distance: "50px",
-    origin: "bottom",
-    duration: 1000,
-  };
-  
-  ScrollReveal().reveal(".containerHero__left h1", {
-    ...scrollRevealOption,
+let currentWordIndex = 0;
+let maxWordIndex = words.length - 1;
+words[currentWordIndex].style.opacity = "1";
+
+let rotateText = () => {
+  let currentWord = words[currentWordIndex];
+  let nextWord =
+    currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
+  // rotate out letters of current word
+  Array.from(currentWord.children).forEach((letter, i) => {
+    setTimeout(() => {
+      letter.className = "letter out";
+    }, i * 80);
   });
-  ScrollReveal().reveal(".containerHero__left .containerHero__btnHero", {
-    ...scrollRevealOption,
-    delay: 500,
+  // reveal and rotate in letters of next word
+  nextWord.style.opacity = "1";
+  Array.from(nextWord.children).forEach((letter, i) => {
+    letter.className = "letter behind";
+    setTimeout(() => {
+      letter.className = "letter in";
+    }, 340 + i * 80);
   });
-  
-  ScrollReveal().reveal(".containerHero__right h4", {
-    ...scrollRevealOption,
-    delay: 2000,
-  });
-  ScrollReveal().reveal(".containerHero__right h2", {
-    ...scrollRevealOption,
-    delay: 2500,
-  });
-  ScrollReveal().reveal(".containerHero__right h3", {
-    ...scrollRevealOption,
-    delay: 3000,
-  });
-  ScrollReveal().reveal(".containerHero__right p", {
-    ...scrollRevealOption,
-    delay: 3500,
-  });
-  
-  ScrollReveal().reveal(".containerHero__right .tent-1", {
-    duration: 1000,
-    delay: 4000,
-  });
-  ScrollReveal().reveal(".containerHero__right .tent-2", {
-    duration: 1000,
-    delay: 4500,
-  });
-  
-  ScrollReveal().reveal(".locationHero", {
-    ...scrollRevealOption,
-    origin: "left",
-    delay: 5000,
-  });
-  
-  ScrollReveal().reveal(".socials span", {
-    ...scrollRevealOption,
-    origin: "top",
-    delay: 5500,
-    interval: 500,
-  });
-  
+  currentWordIndex =
+    currentWordIndex === maxWordIndex ? 0 : currentWordIndex + 1;
+};
+
+rotateText();
+setInterval(rotateText, 4000);

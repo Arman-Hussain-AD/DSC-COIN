@@ -63,7 +63,7 @@ html {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--dark-color);
+  background-color: transparent;
   z-index: var(--z-fixed);
 }
 
